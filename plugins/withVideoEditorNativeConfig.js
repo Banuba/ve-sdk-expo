@@ -73,8 +73,6 @@ function withIosLocalizableStrings(config) {
   return withDangerousMod(config, ["ios", async (config) => {
     const projectRoot = config.modRequest.projectRoot;
     const sourceRoot = path.join(projectRoot, "ios-locales");
-
-    // ios/
     const destRoot = config.modRequest.platformProjectRoot;
 
     copyDirSync(sourceRoot, destRoot);

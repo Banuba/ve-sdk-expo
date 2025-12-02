@@ -44,4 +44,4 @@ This example demonstrates how to integrate the [Video Editor React Native Plugin
    }
    ```
 4. Add the [necessary permissons](app.json#L13) for iOS.
-5. Add [Localization file](ios-locales/en.lproj/Localizable.strings).
+5. Add [Localization file](ios-locales/en.lproj/Localizable.strings) and add it to Copy Bundle Resources of iOS project.
