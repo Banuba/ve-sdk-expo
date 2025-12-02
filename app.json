@@ -1,0 +1,54 @@
+{
+  "expo": {
+    "name": "ve-sdk-expo",
+    "slug": "ve-sdk-expo",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "scheme": "vesdkexpo",
+    "userInterfaceStyle": "automatic",
+    "newArchEnabled": true,
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.vesdkexpo",
+      "infoPlist": {
+        "NSAppleMusicUsageDescription": "This app requires access to the media library.",
+        "NSCameraUsageDescription": "This app requires access to the camera.",
+        "NSMicrophoneUsageDescription": "This app requires access to the microphone.",
+        "NSPhotoLibraryUsageDescription": "This app requires access to the photo library."
+      }
+    },
+    "android": {
+      "edgeToEdgeEnabled": true,
+      "predictiveBackGestureEnabled": false,
+      "package": "com.vesdkexpo"
+    },
+    "plugins": [
+      "./plugins/withVideoEditorNativeConfig",
+      "expo-router",
+      [
+        "expo-build-properties",
+        {
+          "android": {
+            "minSdkVersion": 26,
+            "extraMavenRepos": [
+              {
+                "url": "https://nexus.banuba.net/repository/maven-releases"
+              }
+            ]
+          }
+        }
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": true,
+      "reactCompiler": true
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "0f3e4b43-c290-4ab6-8b32-111765abeacc"
+      }
+    },
+    "owner": "hermankhodyrev"
+  }
+}
