@@ -16,7 +16,12 @@ This example demonstrates how to integrate the [Video Editor React Native Plugin
    ```bash
    npx expo prebuild --clean
    ```
-4. Run the project on the devices:
+4. Add the necessary resources to the created Android module according to the [documentation](https://docs.banuba.com/ve-pe-sdk/docs/ios/resources-installation).
+   * Android:
+     1. [drawable-xhdpi](https://github.com/Banuba/ve-sdk-android-integration-sample/tree/main/app/src/main/res/drawable-xhdpi), [drawable-xxhdpi](https://github.com/Banuba/ve-sdk-android-integration-sample/blob/main/app/src/main/res/drawable-xxhdpi), [drawable-xxxhdpi](http://github.com/Banuba/ve-sdk-android-integration-sample/tree/main/app/src/main/res/drawable-xxxhdpi) are visual assets for color filter previews.
+     themes.xml includes implementation of VideoCreationTheme of Video Editor SDK.
+     2. [themes.xml](https://github.com/Banuba/ve-sdk-android-integration-sample/blob/main/app/src/main/res/values/themes.xml) includes implementation of VideoCreationTheme of Video Editor SDK.
+
    * Android
    ```bash
    npx expo run:android    
