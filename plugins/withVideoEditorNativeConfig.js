@@ -73,9 +73,45 @@ function withIosLocalizableStrings(config) {
   return withDangerousMod(config, ["ios", async (config) => {
     const projectRoot = config.modRequest.projectRoot;
     const sourceRoot = path.join(projectRoot, "ios-locales");
-    const destRoot = config.modRequest.platformProjectRoot;
+    const destRoot = path.join(config.modRequest.platformProjectRoot, "en.lproj");
 
     copyDirSync(sourceRoot, destRoot);
+    return config;
+  }]);
+}
+
+function withIosLutsResources(config) {
+  return withDangerousMod(config, ["ios", async (config) => {
+    const projectRoot = config.modRequest.projectRoot;
+    //Add your resource directory from which this function will copy and paste Luts into the desired part of the project during assembly.
+    const sourceResDir = path.join(projectRoot, "assets", "ios-res", "luts");
+    const destResDir = path.join(config.modRequest.platformProjectRoot, "vesdkexpo", "luts");
+
+    copyDirSync(sourceResDir, destResDir);
+    return config;
+  }]);
+}
+
+function withIosDrawableEffectsPreviewAndColorEffectsPreviewResources(config) {
+  return withDangerousMod(config, ["ios", async (config) => {
+    const projectRoot = config.modRequest.projectRoot;
+    //Add your resource directory from which this function will copy and paste EffectsPreview and ColorEffectsPreview into the desired part of the project during assembly.
+    const sourceResDir = path.join(projectRoot, "assets", "ios-res", "Images", "xcassets");
+    const destResDir = path.join(config.modRequest.platformProjectRoot, "vesdkexpo", "Images.xcassets");
+
+    copyDirSync(sourceResDir, destResDir);
+    return config;
+  }]);
+}
+
+function withAndroidDrawableResources(config) {
+  return withDangerousMod(config, ["android", async (config) => {
+    const projectRoot = config.modRequest.projectRoot;
+    //Add your resource directory from which this function will copy and paste drawable-xxxhdpi into the desired part of the project during assembly.
+    const sourceResDir = path.join(projectRoot, "assets", "android-res", "drawable-xxxhdpi");
+    const destResDir = path.join(config.modRequest.platformProjectRoot, "app", "src", "main", "res", "drawable-xxxhdpi");
+
+    copyDirSync(sourceResDir, destResDir);
     return config;
   }]);
 }
@@ -84,5 +120,8 @@ module.exports = function withBanuba(config) {
   config = withBanubaPodSources(config);
   config = withBanubaActivity(config);
   config = withIosLocalizableStrings(config);
+  config = withAndroidDrawableResources(config)
+  config = withIosDrawableEffectsPreviewAndColorEffectsPreviewResources(config)
+  config = withIosLutsResources(config)
   return config;
 };
