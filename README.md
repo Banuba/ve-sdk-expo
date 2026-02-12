@@ -16,7 +16,8 @@ This example demonstrates how to integrate the [Video Editor React Native Plugin
    ```bash
    npx expo prebuild --clean
    ```
-4. Add the necessary resources to the created iOS and Android modules according to the [iOS documentation](https://docs.banuba.com/ve-pe-sdk/docs/ios/resources-installation) and [android doumentation](https://docs.banuba.com/ve-pe-sdk/docs/android/resources-installation).
+4. Add required resources to iOS and Android modules according to the [iOS documentation](https://docs.banuba.com/ve-pe-sdk/docs/ios/resources-installation) and [Android doumentation](https://docs.banuba.com/ve-pe-sdk/docs/android/resources-installation).\
+   Please, make sure all these resources are present in your project:
    * Android:
      1. [drawable-xhdpi](https://github.com/Banuba/ve-sdk-android-integration-sample/tree/main/app/src/main/res/drawable-xhdpi), [drawable-xxhdpi](https://github.com/Banuba/ve-sdk-android-integration-sample/blob/main/app/src/main/res/drawable-xxhdpi), [drawable-xxxhdpi](http://github.com/Banuba/ve-sdk-android-integration-sample/tree/main/app/src/main/res/drawable-xxxhdpi) are visual assets for color filter previews.
      themes.xml includes implementation of VideoCreationTheme of Video Editor SDK - insert them here `android/app/src/main/res`.
@@ -29,8 +30,8 @@ This example demonstrates how to integrate the [Video Editor React Native Plugin
      4. [Localized Strings](https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/en.lproj/Localizable.strings) - insert them here `ios/vesdkexpo/en.lproj` and add it to Copy Bundle Resources of iOS project.
    
     \
-   Important !\
-   Manual copying preserves your files in Android and iOS modules until they are cleared.
+   :exclamation: Important  
+   Expo cleans up native modules after the `prebuild` phase. You'll need to repeat step 4 again.
  
  \
 5. Run the project on the devices:
