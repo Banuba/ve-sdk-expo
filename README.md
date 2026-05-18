@@ -22,7 +22,7 @@ The example app demonstrates:
 
 The example code in this repository is provided under the terms in the LICENSE file. The Banuba Video Editor SDK itself is commercial — a trial token is required to run the editor.
 
-To obtain a free trial token, send a message via [www.banuba.com/contacts](https://www.banuba.com/contacts) — we'll respond with a trial token.
+To obtain a free trial token, send a message via [www.banuba.com/contacts](https://www.banuba.com/contact) — we'll respond with a trial token.
 
 ## Launch Instructions
 
@@ -36,18 +36,7 @@ To obtain a free trial token, send a message via [www.banuba.com/contacts](https
    ```bash
    npx expo prebuild --clean
    ```
-4. Add required resources to iOS and Android modules according to the [iOS documentation](https://docs.banuba.com/ve-pe-sdk/docs/ios/resources-installation) and [Android doumentation](https://docs.banuba.com/ve-pe-sdk/docs/android/resources-installation).\
-   Please, make sure all these resources are present in your project:
-   * Android:
-     1. [drawable-xhdpi](https://github.com/Banuba/ve-sdk-android-integration-sample/tree/main/app/src/main/res/drawable-xhdpi), [drawable-xxhdpi](https://github.com/Banuba/ve-sdk-android-integration-sample/blob/main/app/src/main/res/drawable-xxhdpi), [drawable-xxxhdpi](http://github.com/Banuba/ve-sdk-android-integration-sample/tree/main/app/src/main/res/drawable-xxxhdpi) are visual assets for color filter previews.
-     themes.xml includes implementation of VideoCreationTheme of Video Editor SDK - insert them here `android/app/src/main/res`.
-     2. [themes.xml](https://github.com/Banuba/ve-sdk-android-integration-sample/blob/main/app/src/main/res/values/themes.xml) includes implementation of VideoCreationTheme of Video Editor SDK - insert them here `android/app/src/main/res/values`.
-
-   * iOS:
-     1. [luts](https://github.com/Banuba/ve-sdk-ios-integration-sample/tree/main/Example/Example/luts) - the folder where all color effects are stored  - insert them here `ios/vesdkexpo`; 
-     2. [ColorEffectsPreview](https://github.com/Banuba/ve-sdk-ios-integration-sample/tree/main/Example/Example/Assets.xcassets/ColorEffectsPreview) - preview images of color effects - insert them here `ios/vesdkexpo/Images.xcassets`;
-     3. [Effects Preview](https://github.com/Banuba/ve-sdk-ios-integration-sample/tree/main/Example/Example/Assets.xcassets/Effects%20Preview) - preview images of visual effects - insert them here `ios/vesdkexpo/Images.xcassets`;
-     4. [Localized Strings](https://github.com/Banuba/ve-sdk-ios-integration-sample/blob/main/Example/Example/en.lproj/Localizable.strings) - insert them here `ios/vesdkexpo/en.lproj` and add it to Copy Bundle Resources of iOS project.
+4. If the plugin version you are using is below 0.43, please add the required resources according to migration [1.50.1](https://vebanuba.notion.site/1-50-1-312fdb8b445b8061ac9cc65d882dfe9e) for iOS and [1.50.0](https://vebanuba.notion.site/1-50-0-311fdb8b445b802bba70d6e4a56367a7) for Android.
    
     \
    :exclamation: Important  
@@ -71,7 +60,7 @@ To obtain a free trial token, send a message via [www.banuba.com/contacts](https
    npm install video-editor-react-native
    ```
 
-2. Add [Expo config plugin](plugins/withBanubaVideoEditor.js) (Android Manifest + iOS Podfile) to the root of your project
+2. Add [Expo config plugin](plugins/withVideoEditorNativeConfig.js) (Android Manifest + iOS Podfile) to the root of your project
 3. Register the plugin in app.json (or app.config.js)
    ```typescript
    "expo": {
@@ -86,9 +75,9 @@ To obtain a free trial token, send a message via [www.banuba.com/contacts](https
 
 ## Documentation
 
-Full Banuba Video Editor SDK documentation: [docs.banuba.com/ve-pe-sdk](https://docs.banuba.com/ve-pe-sdk).
+Full Banuba Video Editor SDK documentation: [docs.banuba.com/ve-pe-sdk](https://docs.banuba.com/ve-pe-sdk/docs/react/ve_installation).
 
-React Native specific docs: [Banuba Photo Editor React Native](https://docs.banuba.com/ve-pe-sdk/docs/react/pe_installation.md) · [Integration Guide on React Native](https://docs.banuba.com/ve-pe-sdk/docs/react/pe_integration.md).
+React Native specific docs: [Banuba Photo Editor React Native](https://docs.banuba.com/ve-pe-sdk/docs/react/pe_installation) · [Integration Guide on React Native](https://docs.banuba.com/ve-pe-sdk/docs/react/pe_integration).
 
 ## Support
 
