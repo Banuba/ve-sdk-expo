@@ -20,7 +20,7 @@ The example app demonstrates:
 
 ## License
 
-The example code in this repository is provided under the terms in the LICENSE file. The Banuba Video Editor SDK itself is commercial — a trial token is required to run the editor.
+The Banuba Video Editor SDK itself is commercial — a trial token is required to run the editor.
 
 To obtain a free trial token, send a message via [www.banuba.com/contacts](https://www.banuba.com/contact) — we'll respond with a trial token.
 
