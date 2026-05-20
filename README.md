@@ -15,8 +15,8 @@ The example app demonstrates:
 
 - Node.js 18+
 - Expo SDK matching the version in `package.json`
-- iOS 13.0+ (for iOS builds)
-- Android 7.0 (API 24)+ (for Android builds)
+- iOS 15.0+ (for iOS builds)
+- Android 8.0 (API 26)+ (for Android builds)
 
 ## License
 
