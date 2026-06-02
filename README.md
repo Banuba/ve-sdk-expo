@@ -53,7 +53,7 @@ To obtain a free trial token, send a message via [www.banuba.com/contacts](https
    npx expo run:ios    
    ```
 
-## Integration insttructions
+## Integration instructions
 
 1. Run the command to intall Video Editor React Native Plugin: 
    ```bash
@@ -76,8 +76,6 @@ To obtain a free trial token, send a message via [www.banuba.com/contacts](https
 ## Documentation
 
 Full Banuba Video Editor SDK documentation: [docs.banuba.com/ve-pe-sdk](https://docs.banuba.com/ve-pe-sdk/docs/react/ve_installation).
-
-React Native specific docs: [Banuba Photo Editor React Native](https://docs.banuba.com/ve-pe-sdk/docs/react/pe_installation) · [Integration Guide on React Native](https://docs.banuba.com/ve-pe-sdk/docs/react/pe_integration).
 
 ## Support
 
